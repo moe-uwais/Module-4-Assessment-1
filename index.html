@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A fun gallery of hilarious people photos with interactive features">
+    <title>Funny People Gallery - Interactive Photo App</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="app-header">
+        <h1>Funny People Gallery</h1>
+        <p class="app-description">Click on any image to view it in full size and enjoy the hilarious moments!</p>
+    </header>
+
+    <main class="gallery-container">
+        <div class="gallery-grid" role="grid" aria-label="Funny people photo gallery">
+            <figure class="gallery-item" role="gridcell">
+                <div class="image-wrapper">
+                    <img src="imgs/IMG_2636.JPG"
+                         alt="Person making a hilarious surprised expression"
+                         class="gallery-image"
+                         data-caption="Hilarious Moment #1"
+                         loading="lazy">
+                    <div class="image-overlay">
+                        <span class="view-text">Click to view</span>
+                    </div>
+                </div>
+                <figcaption class="image-caption">Hilarious Moment #1</figcaption>
+            </figure>
+
+            <figure class="gallery-item" role="gridcell">
+                <div class="image-wrapper">
+                    <img src="imgs/IMG_2637.JPG"
+                         alt="Person in an epic fail situation"
+                         class="gallery-image"
+                         data-caption="Epic Fail #2"
+                         loading="lazy">
+                    <div class="image-overlay">
+                        <span class="view-text">Click to view</span>
+                    </div>
+                </div>
+                <figcaption class="image-caption">Epic Fail #2</figcaption>
+            </figure>
+
+            <figure class="gallery-item" role="gridcell">
+                <div class="image-wrapper">
+                    <img src="imgs/IMG_2638.JPG"
+                         alt="Person in a silly situation"
+                         class="gallery-image"
+                         data-caption="Silly Situation #3"
+                         loading="lazy">
+                    <div class="image-overlay">
+                        <span class="view-text">Click to view</span>
+                    </div>
+                </div>
+                <figcaption class="image-caption">Silly Situation #3</figcaption>
+            </figure>
+
+            <figure class="gallery-item" role="gridcell">
+                <div class="image-wrapper">
+                    <img src="imgs/IMG_2639.JPG"
+                         alt="Person with a goofy expression"
+                         class="gallery-image"
+                         data-caption="Goofy Expression #4"
+                         loading="lazy">
+                    <div class="image-overlay">
+                        <span class="view-text">Click to view</span>
+                    </div>
+                </div>
+                <figcaption class="image-caption">Goofy Expression #4</figcaption>
+            </figure>
+
+            <figure class="gallery-item" role="gridcell">
+                <div class="image-wrapper">
+                    <img src="imgs/IMG_2640.JPG"
+                         alt="Person striking a crazy pose"
+                         class="gallery-image"
+                         data-caption="Crazy Pose #5"
+                         loading="lazy">
+                    <div class="image-overlay">
+                        <span class="view-text">Click to view</span>
+                    </div>
+                </div>
+                <figcaption class="image-caption">Crazy Pose #5</figcaption>
+            </figure>
+
+            <figure class="gallery-item" role="gridcell">
+                <div class="image-wrapper">
+                    <img src="imgs/IMG_2641.JPG"
+                         alt="Person making a funny face"
+                         class="gallery-image"
+                         data-caption="Funny Face #6"
+                         loading="lazy">
+                    <div class="image-overlay">
+                        <span class="view-text">Click to view</span>
+                    </div>
+                </div>
+                <figcaption class="image-caption">Funny Face #6</figcaption>
+            </figure>
+        </div>
+    </main>
+
+    <!-- Modal will be dynamically inserted here -->
+    <div id="modal-root" aria-live="polite" aria-atomic="true"></div>
+
+    <!-- Loading indicator -->
+    <div id="loading-indicator" class="loading-indicator" aria-hidden="true">
+        <div class="spinner"></div>
+        <span class="loading-text">Loading image...</span>
+    </div>
+
+    <noscript>
+        <div class="noscript-message">
+            <p>This app requires JavaScript to function properly. Please enable JavaScript in your browser.</p>
+        </div>
+    </noscript>
+
+    <script src="app.js" defer></script>
+</body>
+</html>
