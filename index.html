@@ -3,118 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A fun gallery of hilarious people photos with interactive features">
-    <title>Funny People Gallery - Interactive Photo App</title>
+    <title>Funny People App</title>
     <link rel="stylesheet" href="index.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="app-header">
-        <h1>Funny People Gallery</h1>
-        <p class="app-description">Click on any image to view it in full size and enjoy the hilarious moments!</p>
+    <header>
+        <h1>Funny People App</h1>
+        <p>Click on a photo to see it larger and have a laugh.</p>
     </header>
 
-    <main class="gallery-container">
-        <div class="gallery-grid" role="grid" aria-label="Funny people photo gallery">
-            <figure class="gallery-item" role="gridcell">
-                <div class="image-wrapper">
-                    <img src="imgs/IMG_2636.JPG"
-                         alt="Person making a hilarious surprised expression"
-                         class="gallery-image"
-                         data-caption="Hilarious Moment #1"
-                         loading="lazy">
-                    <div class="image-overlay">
-                        <span class="view-text">Click to view</span>
-                    </div>
-                </div>
-                <figcaption class="image-caption">Hilarious Moment #1</figcaption>
-            </figure>
-
-            <figure class="gallery-item" role="gridcell">
-                <div class="image-wrapper">
-                    <img src="imgs/IMG_2637.JPG"
-                         alt="Person in an epic fail situation"
-                         class="gallery-image"
-                         data-caption="Epic Fail #2"
-                         loading="lazy">
-                    <div class="image-overlay">
-                        <span class="view-text">Click to view</span>
-                    </div>
-                </div>
-                <figcaption class="image-caption">Epic Fail #2</figcaption>
-            </figure>
-
-            <figure class="gallery-item" role="gridcell">
-                <div class="image-wrapper">
-                    <img src="imgs/IMG_2638.JPG"
-                         alt="Person in a silly situation"
-                         class="gallery-image"
-                         data-caption="Silly Situation #3"
-                         loading="lazy">
-                    <div class="image-overlay">
-                        <span class="view-text">Click to view</span>
-                    </div>
-                </div>
-                <figcaption class="image-caption">Silly Situation #3</figcaption>
-            </figure>
-
-            <figure class="gallery-item" role="gridcell">
-                <div class="image-wrapper">
-                    <img src="imgs/IMG_2639.JPG"
-                         alt="Person with a goofy expression"
-                         class="gallery-image"
-                         data-caption="Goofy Expression #4"
-                         loading="lazy">
-                    <div class="image-overlay">
-                        <span class="view-text">Click to view</span>
-                    </div>
-                </div>
-                <figcaption class="image-caption">Goofy Expression #4</figcaption>
-            </figure>
-
-            <figure class="gallery-item" role="gridcell">
-                <div class="image-wrapper">
-                    <img src="imgs/IMG_2640.JPG"
-                         alt="Person striking a crazy pose"
-                         class="gallery-image"
-                         data-caption="Crazy Pose #5"
-                         loading="lazy">
-                    <div class="image-overlay">
-                        <span class="view-text">Click to view</span>
-                    </div>
-                </div>
-                <figcaption class="image-caption">Crazy Pose #5</figcaption>
-            </figure>
-
-            <figure class="gallery-item" role="gridcell">
-                <div class="image-wrapper">
-                    <img src="imgs/IMG_2641.JPG"
-                         alt="Person making a funny face"
-                         class="gallery-image"
-                         data-caption="Funny Face #6"
-                         loading="lazy">
-                    <div class="image-overlay">
-                        <span class="view-text">Click to view</span>
-                    </div>
-                </div>
-                <figcaption class="image-caption">Funny Face #6</figcaption>
-            </figure>
+    <main class="gallery">
+        <div class="card">
+            <img src="imgs/IMG_2636.JPG" alt="Hilarious Moment #1" data-caption="Hilarious Moment #1">
+            <p>Hilarious Moment #1</p>
+        </div>
+        <div class="card">
+            <img src="imgs/IMG_2637.JPG" alt="Epic Fail #2" data-caption="Epic Fail #2">
+            <p>Epic Fail #2</p>
+        </div>
+        <div class="card">
+            <img src="imgs/IMG_2638.JPG" alt="Silly Situation #3" data-caption="Silly Situation #3">
+            <p>Silly Situation #3</p>
+        </div>
+        <div class="card">
+            <img src="imgs/IMG_2639.JPG" alt="Goofy Expression #4" data-caption="Goofy Expression #4">
+            <p>Goofy Expression #4</p>
+        </div>
+        <div class="card">
+            <img src="imgs/IMG_2640.JPG" alt="Crazy Pose #5" data-caption="Crazy Pose #5">
+            <p>Crazy Pose #5</p>
+        </div>
+        <div class="card">
+            <img src="imgs/IMG_2641.JPG" alt="Funny Face #6" data-caption="Funny Face #6">
+            <p>Funny Face #6</p>
         </div>
     </main>
 
-    <!-- Modal will be dynamically inserted here -->
-    <div id="modal-root" aria-live="polite" aria-atomic="true"></div>
-
-    
-
-    <noscript>
-        <div class="noscript-message">
-            <p>This app requires JavaScript to function properly. Please enable JavaScript in your browser.</p>
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <button id="close-modal" class="modal-close" type="button">&times;</button>
+            <img id="modal-image" class="modal-image" src="" alt="">
+            <p id="modal-caption" class="modal-caption"></p>
         </div>
-    </noscript>
+    </div>
 
-    <script src="app.js" defer></script>
+    <script src="app.js"></script>
 </body>
 </html>
